@@ -7,9 +7,12 @@ import Cart from './components/pages/Cart';
 import Contact from './components/pages/Contact';
 import Home from './components/pages/Home';
 import NotFound from './components/pages/NotFound';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { createRef } from 'react';
+
 function App() {
   return (
-    <>
+    <div ref={createRef()}>
       <Router>
         <Header />
         <Switch>
@@ -21,7 +24,7 @@ function App() {
           <Route component={NotFound} />
         </Switch>
       </Router>
-    </>
+    </div>
   );
 }
 
