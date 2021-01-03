@@ -9,7 +9,7 @@ import Home from './components/pages/Home';
 import NotFound from './components/pages/NotFound';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { createRef } from 'react';
-import Footer from './components/pages/Footer';
+import Footer from './components/layout/Footer';
 
 function App() {
   return (
@@ -18,7 +18,6 @@ function App() {
         <Header />
         <Switch>
           <Route exact path='/' component={Home} />
-
           <Route exact path='/about' component={About} />
           <Route exact path='/products' component={Products} />
           <Route exact path='/contact' component={Contact} />
