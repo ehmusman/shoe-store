@@ -16,3 +16,7 @@ body {
   width: 500px !important;
   height: 500px !important;
 } */
+.product:hover {
+  background-color: #000;
+  color: #fff;
+}
