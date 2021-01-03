@@ -12,7 +12,6 @@ function Products({
                     <span className="col-md-4 text-lead">Description:</span>
                     <p className="card-text text-muted col-md-8">{description}</p>
                 </div>
-
                 <button
                     onClick={() => window.alert('Product is added to cart')}
                     className="btn btn-dark btn-sm">
