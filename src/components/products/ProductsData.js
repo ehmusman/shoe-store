@@ -5,17 +5,19 @@ function ProductsData() {
     const { Product } = useContext(StoreContext)
     console.log(Product)
     return (
-        <div className='card-columns container'>
-            {Product.map(item => (
-                <Products
-                    key={item.id}
-                    name={item.productName}
-                    description={item.description}
-                    img={item.img}
-                    price={item.price}
-                    quantity={item.quantity}
-                />
-            ))}
+        <div className="container">
+            <div className='row '>
+                {Product.map(item => (
+                    <Products
+                        key={item.id}
+                        name={item.productName}
+                        description={item.description}
+                        img={item.img}
+                        price={item.price}
+                        quantity={item.quantity}
+                    />
+                ))}
+            </div>
         </div>
     )
 }

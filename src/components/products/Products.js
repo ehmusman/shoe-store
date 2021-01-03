@@ -4,11 +4,15 @@ function Products({
     name, description, img, price, quantity
 }) {
     return (
-        <div className=" card py-3" >
+        <div className=" card py-3 col-md-5" >
             <img src={img} className="card-img-top" alt="" width='300px' height='300px' />
             <div className="card-body">
-                <h4 className="card-title">{name}</h4>
-                <p className="card-text">{description}</p>
+                <h4 className="card-title">{name} <span className='float-right'>${price}</span></h4>
+                <div className="row">
+                    <span className="col-md-4 text-lead">Description:</span>
+                    <p className="card-text text-muted col-md-8">{description}</p>
+                </div>
+
                 <button className="btn btn-dark btn-sm">
                     Add to Cart
                 </button>
