@@ -2,8 +2,7 @@ import React from 'react';
 
 
 function Products({
-    name, description, img, price, quantity
-}) {
+    name, description, img, price }) {
     return (
         <div className=" card py-3 product col-md-6" >
             <img src={img} className="card-img-top" alt="" width='300px' height='300px' />
@@ -15,7 +14,7 @@ function Products({
                 </div>
 
                 <button
-                    // onClick={toggleModel => }
+                    onClick={() => window.alert('Product is added to cart')}
                     className="btn btn-dark btn-sm">
                     Add to Cart
                 </button>

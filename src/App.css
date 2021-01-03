@@ -12,11 +12,7 @@ body {
   padding-top: 20px;
   width: 100%;
 }
-/* .product {
-  width: 500px !important;
-  height: 500px !important;
-} */
 .product:hover {
-  background-color: #000;
+  background-color: #292b2c;
   color: #fff;
 }
