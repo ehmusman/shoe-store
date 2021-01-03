@@ -8,12 +8,13 @@ import Contact from './components/pages/Contact';
 import Home from './components/pages/Home';
 import NotFound from './components/pages/NotFound';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React, { createRef } from 'react';
+import React from 'react';
+import StoreState from './Context/StoreState'
 import Footer from './components/layout/Footer';
 
 function App() {
   return (
-    <div ref={createRef()}>
+    <StoreState>
       <Router>
         <Header />
         <Switch>
@@ -26,7 +27,7 @@ function App() {
         </Switch>
         <Footer />
       </Router>
-    </div>
+    </StoreState>
   );
 }
 

@@ -1,4 +1,4 @@
-const StoreReducer = (state, dispatch){
+const StoreReducer = (state, dispatch) => {
     switch (dispatch.type) {
         default:
             return state;
