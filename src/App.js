@@ -11,7 +11,6 @@ import StoreState from './Context/StoreState'
 import Footer from './components/layout/Footer';
 import ProductsData from './components/products/ProductsData';
 import CartData from './components/cart/CartData';
-import Rest from './Rest'
 function App() {
   return (
     <StoreState>
@@ -27,7 +26,6 @@ function App() {
         </Switch>
         <Footer />
       </Router>
-      <Rest />
     </StoreState>
   );
 }
