@@ -5,12 +5,17 @@ import { Link } from 'react-router-dom'
 
 function CartData() {
     const { cart } = useContext(StoreContext)
-    // const filteredCart = cart.filter()
+    const obj = {},
+        newProducts = cart.filter((item, _) => {
+            let already = obj.hasOwnProperty(item.id)
+            return already ? false : obj[item.id] = 1
+        })
+    // console.log(newProducts)
     return (
         <>
-            {cart.length ? (
+            {newProducts.length ? (
                 <>
-                    {cart.map(item => (
+                    {newProducts.map(item => (
                         <Cart
                             key={item.id}
                             name={item.name}

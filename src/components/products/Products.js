@@ -4,7 +4,8 @@ import StoreContext from '../../Context/storeContext'
 
 function Products({
     name, description, img, price, id }) {
-    const { addProductToCart } = useContext(StoreContext)
+    const { addProductToCart, cart } = useContext
+        (StoreContext)
     const addToCart = () => {
         window.alert('Product is added to cart')
         addProductToCart({
