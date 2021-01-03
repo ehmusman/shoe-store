@@ -2,7 +2,6 @@ import './App.css';
 import Header from './components/layout/Header';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import About from './components/pages/About';
-import Products from './components/products/Products';
 import Cart from './components/cart/Cart';
 import Contact from './components/pages/Contact';
 import Home from './components/pages/Home';
@@ -11,6 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import StoreState from './Context/StoreState'
 import Footer from './components/layout/Footer';
+import ProductsData from './components/products/ProductsData';
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/about' component={About} />
-          <Route exact path='/products' component={Products} />
+          <Route exact path='/products' component={ProductsData} />
           <Route exact path='/contact' component={Contact} />
           <Route exact path='/cart' component={Cart} />
           <Route component={NotFound} />

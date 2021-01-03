@@ -52,7 +52,7 @@ const StoreState = (props) => {
     // })
     return <StoreContext.Provider
         value={{
-            initialValues: state.initialValues,
+            Product: state.initialValues,
 
         }}>
         {props.children}
