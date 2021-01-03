@@ -12,7 +12,7 @@ function Header() {
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item">
                             <Link className="nav-link" to="/">
-                                <i class="fas fa-home"></i>
+                                <i className="fas fa-home"></i>
                                 Home</Link>
                         </li>
                         <li className="nav-item">

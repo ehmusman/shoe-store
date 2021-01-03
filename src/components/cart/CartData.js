@@ -10,7 +10,6 @@ function CartData() {
             let already = obj.hasOwnProperty(item.id)
             return already ? false : obj[item.id] = 1
         })
-    // console.log(newProducts)
     return (
         <>
             {newProducts.length ? (

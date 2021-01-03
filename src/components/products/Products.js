@@ -6,6 +6,7 @@ function Products({
     name, description, img, price, id }) {
     const { addProductToCart, cart } = useContext
         (StoreContext)
+
     const addToCart = () => {
         window.alert('Product is added to cart')
         addProductToCart({
