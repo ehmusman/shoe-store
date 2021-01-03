@@ -11,7 +11,9 @@ function Header() {
                 <div id="navBarNav" className="collapse navbar-collapse">
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item">
-                            <Link className="nav-link" to="/">Home</Link>
+                            <Link className="nav-link" to="/">
+                                <i class="fas fa-home"></i>
+                                Home</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/about">About</Link>
@@ -23,7 +25,9 @@ function Header() {
                             <Link className="nav-link" to="/contact">Contact</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/cart">Cart</Link>
+                            <Link className="nav-link" to="/cart">
+                                <i className="fas fa-shopping-cart"></i>
+                                Cart</Link>
                         </li>
                     </ul>
                 </div>
