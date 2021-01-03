@@ -19,17 +19,16 @@ function Cart() {
                             Quantity
                             <div className="input-group pt-3">
                                 <div className="input-group-prepend">
-                                    <button className="btn btn-dark"><i class="fas fa-minus"></i></button>
+                                    <button className="btn btn-dark"><i className="fas fa-minus"></i></button>
                                 </div>
                                 <input type="number" min="0"
                                     className="form-control" />
                                 <div className="input-group-append">
-                                    <button className="btn btn-dark"><i class="fas fa-plus"></i></button>
+                                    <button className="btn btn-dark"><i className="fas fa-plus"></i></button>
                                 </div>
                             </div>
-
                         </div>
-                        <div className="col-md-3">
+                        <div className="col-md-3 pl-3">
                             price
                         </div>
                         {/* <h4 className="card-title">asdfgh</h4> */}

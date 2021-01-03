@@ -42,12 +42,14 @@ const StoreState = (props) => {
             {
                 id: 12, productName: 'Bowling Shoes', price: 1599, description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque, officiis?', img: Control.imagetwelve
             }
-        ]
+        ],
+        cart: []
 
     }
 
     const [state, dispatch] = useReducer(StoreReducer, initialState)
     const addProductToCart = (action) => {
+        // console.log(action)
         dispatch({
             type: action.type,
             payload: action.payload
@@ -58,7 +60,7 @@ const StoreState = (props) => {
     return <StoreContext.Provider
         value={{
             Product: state.products,
-            model: state.productAddedModel,
+            cart: state.cart,
             addProductToCart
         }}>
         {props.children}
