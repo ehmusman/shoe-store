@@ -2,8 +2,8 @@ import './App.css';
 import Header from './components/layout/Header';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import About from './components/pages/About';
-import Products from './components/pages/Products';
-import Cart from './components/pages/Cart';
+import Products from './components/products/Products';
+import Cart from './components/cart/Cart';
 import Contact from './components/pages/Contact';
 import Home from './components/pages/Home';
 import NotFound from './components/pages/NotFound';
