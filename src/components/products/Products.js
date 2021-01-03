@@ -4,7 +4,7 @@ import StoreContext from '../../Context/storeContext'
 
 function Products({
     name, description, img, price, id }) {
-    const { addProductToCart, cart } = useContext
+    const { addProductToCart} = useContext
         (StoreContext)
 
     const addToCart = () => {
