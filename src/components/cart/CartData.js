@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom'
 function CartData() {
     const { cart } = useContext(StoreContext)
     const total = cart.map(amount => amount.totalAmount)
-    console.log(total)
     return (
         <>
             {cart.length ? (

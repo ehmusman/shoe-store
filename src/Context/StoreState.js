@@ -54,7 +54,6 @@ const StoreState = (props) => {
         })
     }
     const updateAmount = (action) => {
-        console.log(action)
         dispatch({
             type: action.type,
             payload: action.payload

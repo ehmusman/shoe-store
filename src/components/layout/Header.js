@@ -30,7 +30,7 @@ function Header() {
                                 Cart</Link>
                         </li>
                     </ul>
-                </div>
+                
             </div>
         </nav>
 
