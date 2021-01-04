@@ -16,3 +16,19 @@ body {
   background-color: #292b2c;
   color: #fff;
 }
+
+@media (max-width: 1000px) {
+  .nav-inner {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    margin-left: 0 !important;
+  }
+  .nav-outer {
+    display: flex !important;
+    flex-direction: row !important;
+  }
+  body {
+    background-color: #292b2c !important;
+  }
+}
