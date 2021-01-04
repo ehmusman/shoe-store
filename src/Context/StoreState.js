@@ -60,7 +60,6 @@ const StoreState = (props) => {
         })
     }
     const removeFromCart = (action) => {
-        console.log(action)
         dispatch({
             type: action.type,
             payload: action.payload
