@@ -26,10 +26,10 @@ function Cart({
         setCount(1 + count)
     }
     const decrement = () => {
-        setCount(Math.max(1, count - 1))
+        setCount(Math.max(Number(''), count - 1))
     }
     const onChange = (e) => {
-        setCount(Math.max(1, e.target.value))
+        setCount(Math.max(Number(''), e.target.value))
     }
     const removeCart = () => {
         if (window.confirm('Do You Want To Delete This Item')) {
