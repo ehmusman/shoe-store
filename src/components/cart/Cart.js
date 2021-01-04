@@ -1,9 +1,10 @@
+//eslint-disable-next-line
 import React, { useState, useContext, useEffect } from 'react'
 import StoreContext from '../../Context/storeContext'
 
 function Cart({
     id, name, img, price, description, totalAmount }) {
-    const { updateAmount } = useContext(StoreContext)
+    const { updateAmount, removeFromCart } = useContext(StoreContext)
 
     const [count, setCount] = useState(1)
     useEffect(() => {
@@ -19,7 +20,8 @@ function Cart({
                 quantity: count
             }
         })
-    }, [count])
+    }, [count])//eslint-disable-next-line
+    //eslint-disable-next-line
     const increment = () => {
         setCount(1 + count)
     }
@@ -28,6 +30,14 @@ function Cart({
     }
     const onChange = (e) => {
         setCount(Math.max(1, e.target.value))
+    }
+    const removeCart = () => {
+        if (window.confirm('Do You Want To Delete This Item')) {
+            removeFromCart({
+                type: 'REMOVE_CART',
+                payload: id
+            })
+        }
     }
     return (
         <div className="container">
@@ -61,6 +71,10 @@ function Cart({
                                     ><i className="fas fa-plus"></i></button>
                                 </div>
                             </div>
+                            <button
+                                className="btn btn-danger btn-block mt-5"
+                                onClick={removeCart}
+                            >Remove From Cart</button>
                         </div>
                         <div className="col-md-3 pl-3">
                             price: ${totalAmount}

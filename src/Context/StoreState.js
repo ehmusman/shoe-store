@@ -59,6 +59,18 @@ const StoreState = (props) => {
             payload: action.payload
         })
     }
+    const removeFromCart = (action) => {
+        console.log(action)
+        dispatch({
+            type: action.type,
+            payload: action.payload
+        })
+    }
+    const finalCheckOut = (action) => {
+        dispatch({
+            type: action.type
+        })
+    }
 
 
 
@@ -67,7 +79,9 @@ const StoreState = (props) => {
             Product: state.products,
             cart: state.cart,
             addProductToCart,
-            updateAmount
+            updateAmount,
+            removeFromCart,
+            finalCheckOut
         }}>
         {props.children}
     </StoreContext.Provider>

@@ -4,7 +4,14 @@ import StoreContext from '../../Context/storeContext'
 import { Link } from 'react-router-dom'
 
 function CartData() {
-    const { cart } = useContext(StoreContext)
+    const { cart, finalCheckOut } = useContext(StoreContext)
+    const checkOut = () => {
+        if (window.confirm("Thank For Visiting Us, Your Products Will Be Shipped Soon")) {
+            finalCheckOut({
+                type: 'CLEAR_CART'
+            })
+        }
+    }
     const total = cart.map(amount => amount.totalAmount)
     return (
         <>
@@ -26,7 +33,11 @@ function CartData() {
                         <div className="card">
                             <div className="card-header h1">Net Price</div>
                             <div className="card-body">
-                                <div className="h3"> Your Total Bill is ${total.length !== 0 && total.reduce((a, b) => a + b)}</div>
+                                <div className="h3"> Your Total Bill is ${total.length !== 0 && total.reduce((a, b) => a + b)}
+                                    <button className="btn btn-dark btn-lg float-right"
+                                        onClick={checkOut}
+                                    >Check Out</button>
+                                </div>
                             </div>
                         </div>
                     </div>
