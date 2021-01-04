@@ -1,15 +1,33 @@
-import React, { useState } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
+import StoreContext from '../../Context/storeContext'
 
 function Cart({
-    name, img, price, description
-}) {
-    const [count, setCount] = useState(1)
+    id, name, img, price, description, totalAmount }) {
+    const { updateAmount } = useContext(StoreContext)
 
+    const [count, setCount] = useState(1)
+    useEffect(() => {
+        updateAmount({
+            type: 'INCREMENT_AMOUNT',
+            payload: {
+                id,
+                name,
+                img,
+                price,
+                totalAmount: price * count,
+                description,
+                quantity: count
+            }
+        })
+    }, [count])
     const increment = () => {
-        setCount(count + 1)
+        setCount(1 + count)
     }
     const decrement = () => {
         setCount(Math.max(1, count - 1))
+    }
+    const onChange = (e) => {
+        setCount(Math.max(1, e.target.value))
     }
     return (
         <div className="container">
@@ -35,7 +53,7 @@ function Cart({
                                 </div>
                                 <input type="number" min="0"
                                     value={count}
-                                    readOnly
+                                    onChange={onChange}
                                     className="form-control" />
                                 <div className="input-group-append">
                                     <button className="btn btn-dark"
@@ -45,7 +63,7 @@ function Cart({
                             </div>
                         </div>
                         <div className="col-md-3 pl-3">
-                            price: ${price}
+                            price: ${totalAmount}
                         </div>
                     </div>
                 </div>

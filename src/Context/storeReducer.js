@@ -17,6 +17,13 @@ const StoreReducer = (state, action) => {
                     ...state
                 }
             }
+        case 'INCREMENT_AMOUNT':
+            return {
+                ...state,
+                cart: state.cart.map(product =>
+                    product.id === action.payload.id ? (product = action.payload) : product
+                )
+            }
         default:
             return state;
     }

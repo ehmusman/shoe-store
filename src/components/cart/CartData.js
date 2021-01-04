@@ -5,29 +5,29 @@ import { Link } from 'react-router-dom'
 
 function CartData() {
     const { cart } = useContext(StoreContext)
-    const obj = {},
-        newProducts = cart.filter((item, _) => {
-            let already = obj.hasOwnProperty(item.id)
-            return already ? false : obj[item.id] = 1
-        })
+    const total = cart.map(amount => amount.totalAmount)
+    console.log(total)
     return (
         <>
-            {newProducts.length ? (
+            {cart.length ? (
                 <>
-                    {newProducts.map(item => (
+                    {cart.map(item => (
                         <Cart
                             key={item.id}
+                            id={item.id}
                             name={item.name}
                             img={item.img}
                             price={item.price}
                             description={item.description}
+                            quantity={item.quantity}
+                            totalAmount={item.totalAmount}
                         />
                     ))}
                     <div className="container my-3">
                         <div className="card">
                             <div className="card-header h1">Net Price</div>
                             <div className="card-body">
-                                <div className="h3"> Your Total Bill is 5645</div>
+                                <div className="h3"> Your Total Bill is ${total.length !== 0 && total.reduce((a, b) => a + b)}</div>
                             </div>
                         </div>
                     </div>

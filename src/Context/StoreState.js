@@ -48,8 +48,13 @@ const StoreState = (props) => {
 
     const [state, dispatch] = useReducer(StoreReducer, initialState)
     const addProductToCart = (action) => {
-        // console.log(action.payload.id)
-
+        dispatch({
+            type: action.type,
+            payload: action.payload
+        })
+    }
+    const updateAmount = (action) => {
+        console.log(action)
         dispatch({
             type: action.type,
             payload: action.payload
@@ -62,7 +67,8 @@ const StoreState = (props) => {
         value={{
             Product: state.products,
             cart: state.cart,
-            addProductToCart
+            addProductToCart,
+            updateAmount
         }}>
         {props.children}
     </StoreContext.Provider>

@@ -3,7 +3,7 @@ import StoreContext from '../../Context/storeContext'
 
 
 function Products({
-    name, description, img, price, id }) {
+    name, description, img, price, id, quantity, totalAmount }) {
     const { addProductToCart, cart } = useContext
         (StoreContext)
 
@@ -12,7 +12,7 @@ function Products({
         addProductToCart({
             type: 'ADD_TO_CART',
             payload: {
-                id, name, description, img, price
+                id, name, description, img, price, quantity, totalAmount
             }
         })
     }

@@ -14,6 +14,8 @@ function ProductsData() {
                         description={item.description}
                         img={item.img}
                         price={item.price}
+                        quantity={item.quantity}
+                        totalAmount={item.totalAmount}
                     />
                 ))}
             </div>
